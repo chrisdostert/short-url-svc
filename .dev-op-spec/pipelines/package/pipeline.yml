@@ -1,0 +1,6 @@
+description: packages service into a docker image and makes available in local docker registry
+stages:
+- name: generate-dockerfile
+  type: dev-op
+- name: build-docker-image
+  type: dev-op

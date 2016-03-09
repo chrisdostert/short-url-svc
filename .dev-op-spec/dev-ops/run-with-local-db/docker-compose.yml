@@ -1,0 +1,12 @@
+run-with-local-db:
+  image: docker.lxhub.com/localexpert/supplier-platform-svc
+  ports:
+    - 8080:8080
+  env_file:
+    - ../.common/local-db.env
+  links:
+    - mysql
+mysql:
+  extends:
+    file: ../.common/docker-compose.yml
+    service: mysql
