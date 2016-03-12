@@ -45,7 +45,7 @@ class CreateShortUrlUcIT
 
     /** assert **/
     assert(shortUrlView.target == providedTarget)
-    assert((shortUrlView.id: String).nonEmpty)
+    assert(shortUrlView.id.toString.nonEmpty)
 
   }
 
