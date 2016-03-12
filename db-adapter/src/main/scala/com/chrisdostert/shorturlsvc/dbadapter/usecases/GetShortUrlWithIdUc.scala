@@ -1,6 +1,6 @@
 package com.chrisdostert.shorturlsvc.dbadapter.usecases
 
-import com.chrisdostert.shorturlsvc.core.models.ShortUrlView
+import com.chrisdostert.shorturlsvc.core.models.{ShortUrlId, ShortUrlView}
 import com.chrisdostert.shorturlsvc.dbadapter.factories.ShortUrlViewFactory
 import com.chrisdostert.shorturlsvc.dbadapter.tables.ShortUrlsTable
 import slick.driver.MySQLDriver.api._
@@ -16,7 +16,7 @@ class GetShortUrlWithIdUc(
 ) {
 
   def execute(
-    shortUrlId: String
+    shortUrlId: ShortUrlId
   ): Future[ShortUrlView] = {
 
     val shortUrlQuery =

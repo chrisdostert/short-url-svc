@@ -21,10 +21,7 @@ class ShortUrlViewFactoryTest
         )
 
       val expectedShortUrlView =
-        new ShortUrlView(
-          id = providedShortUrlTableRow.id.get.toString,
-          target = new URL(providedShortUrlTableRow.target)
-        )
+        new ShortUrlView(id = providedShortUrlTableRow.id.get.toString, target = new URL(providedShortUrlTableRow.target))
 
       val objectUnderTest =
         new ShortUrlViewFactory()

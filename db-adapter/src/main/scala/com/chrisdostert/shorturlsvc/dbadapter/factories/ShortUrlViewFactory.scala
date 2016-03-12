@@ -12,7 +12,7 @@ class ShortUrlViewFactory {
     shortUrlTableRow: ShortUrlsTableRow
   ): ShortUrlView =
     new ShortUrlView(
-      id = shortUrlTableRow.id.get.toString,
+      id = shortUrlTableRow.id.get,
       target = new URL(shortUrlTableRow.target)
     )
 

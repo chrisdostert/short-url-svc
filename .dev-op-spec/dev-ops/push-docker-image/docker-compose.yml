@@ -6,3 +6,7 @@ push-docker-image:
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
   entrypoint: docker push chrisdostert/short-url-svc
+  environment:
+      - DOCKER_EMAIL
+      - DOCKER_PASSWORD
+      - DOCKER_USERNAME

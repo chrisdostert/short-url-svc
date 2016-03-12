@@ -2,7 +2,7 @@ package com.chrisdostert.shorturlsvc.restapi.json
 
 import java.net.URL
 
-import com.chrisdostert.shorturlsvc.core.models.ShortUrlView
+import com.chrisdostert.shorturlsvc.core.models.{ShortUrlId, ShortUrlView}
 import com.chrisdostert.shorturlsvc.core.tdk.BaseFunSpecTest
 import com.chrisdostert.shorturlsvc.core.tdk.testobjects.ATest
 import spray.json._
@@ -46,6 +46,22 @@ class JsonSupportTest
 
       /** assert **/
       assert(actualShortUrlView == expectedShortUrlView)
+
+    }
+
+    it("should enable round tripping an instance of ShortUrlId to JSON and back") {
+
+      /** arrange **/
+      val expectedShortUrlId: ShortUrlId = 12345L
+
+      /** act **/
+      val actualShortUrlId =
+        expectedShortUrlId
+          .toJson
+          .convertTo[ShortUrlId]
+
+      /** assert **/
+      assert(actualShortUrlId == expectedShortUrlId)
 
     }
 

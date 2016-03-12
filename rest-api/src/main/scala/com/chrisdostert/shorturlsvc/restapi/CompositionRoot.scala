@@ -12,7 +12,7 @@ class CompositionRoot(
   val system: ActorSystem
 ) {
 
-  val jsonSupport = new JsonSupport {}
+  val jsonSupport = JsonSupport
 
   val shortUrlsRoute: ShortUrlsRoute = wire[ShortUrlsRoute]
 

@@ -25,7 +25,7 @@ class CreateShortUrlUc(
         .map(_.get)
         .map(
           shortUrlId => new ShortUrlView(
-            shortUrlId.toString,
+            shortUrlId,
             target
           )
         )

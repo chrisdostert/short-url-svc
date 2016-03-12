@@ -1,5 +1,5 @@
 run-with-local-db:
-  image: docker.lxhub.com/localexpert/supplier-platform-svc
+  image: chrisdostert/short-url-svc
   ports:
     - 8080:8080
   env_file:

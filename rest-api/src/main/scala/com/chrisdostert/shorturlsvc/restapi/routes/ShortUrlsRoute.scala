@@ -21,9 +21,9 @@ class ShortUrlsRoute(
           decodeRequest {
             entity(as[URL]) {
               target =>
-                complete(
+                complete{
                   core.createShortUrl(target)
-                )
+                }
             }
           }
         }

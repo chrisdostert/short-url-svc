@@ -1,7 +1,8 @@
+import java.time.Instant
+
 import com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging
 import sbt.Keys._
 import sbt._
-import sbtassembly.AssemblyKeys._
 import scoverage.ScoverageKeys._
 
 object Build
@@ -9,7 +10,7 @@ object Build
 
   lazy val commonSettings =
     Seq(
-      test in assembly := {},
+      version := s"0.1.0+${Instant.now.getEpochSecond}",
       coverageEnabled in test := true,
       coverageEnabled in IntegrationTest := true,
       coverageMinimum := 90,

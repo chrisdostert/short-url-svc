@@ -16,7 +16,7 @@ class Core private[core](
       .createShortUrlUc
       .execute(target)
 
-  def getShortUrlWithId(id: String): Future[ShortUrlView] =
+  def getShortUrlWithId(id: ShortUrlId): Future[ShortUrlView] =
     compositionRoot
       .getShortUrlWithId
       .execute(id)
