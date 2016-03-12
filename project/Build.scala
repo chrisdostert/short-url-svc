@@ -12,7 +12,10 @@ object Build
   lazy val commonSettings =
     Seq(
       test in assembly := {},
-      version := s"0.1.0+${Instant.now.getEpochSecond}",
+      version := sys.env.getOrElse(
+        "SVC_VERSION",
+        s"0.1.0+${Instant.now.getEpochSecond}"
+      ),
       coverageEnabled in test := true,
       coverageEnabled in IntegrationTest := true,
       coverageMinimum := 90,
