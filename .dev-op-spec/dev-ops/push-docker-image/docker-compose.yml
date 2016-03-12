@@ -5,8 +5,9 @@ push-docker-image:
   image: docker:1.9.1
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-  entrypoint: docker push chrisdostert/short-url-svc
+  entrypoint: .dev-op-spec/dev-ops/push-docker-image/entrypoint.sh
   environment:
-      - DOCKER_EMAIL
-      - DOCKER_PASSWORD
-      - DOCKER_USERNAME
+    - DOCKER_REPO_NAME=chrisdostert/short-url-svc
+    - DOCKER_EMAIL
+    - DOCKER_PASSWORD
+    - DOCKER_USERNAME
