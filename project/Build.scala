@@ -20,6 +20,7 @@ object Build
       updateOptions := updateOptions
         .value
         .withCachedResolution(true),
+      parallelExecution in IntegrationTest := false,
       organization := "com.chrisdostert",
       scalaVersion := "2.11.7",
       scalacOptions := Seq(
