@@ -5,6 +5,6 @@ deploy-to-docker-cloud:
     service: src
   entrypoint: .dev-op-spec/dev-ops/deploy/entrypoint.sh
   environment:
-    - DOCKERCLOUD_USER
-    - DOCKERCLOUD_PASS
+    - DOCKERCLOUD_USER=$DOCKER_USERNAME
+    - DOCKERCLOUD_PASS=$DOCKER_PASSWORD
     - DOCKERCLOUD_STACK_NAME=nintex-dev
