@@ -5,4 +5,6 @@ build-docker-image:
   image: docker:1.9.1
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-  entrypoint: docker build -t chrisdostert/short-url-svc target/docker/stage
+  entrypoint: .dev-op-spec/dev-ops/build-docker-image/entrypoint.sh
+  environment:
+    - DOCKER_REPO_NAME=chrisdostert/short-url-svc
