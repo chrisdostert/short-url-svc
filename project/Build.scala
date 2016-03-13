@@ -14,7 +14,7 @@ object Build
       test in assembly := {},
       version := sys.env.getOrElse(
         "SVC_VERSION",
-        s"0.1.0+${Instant.now.getEpochSecond}"
+        s"0.1.${Instant.now.getEpochSecond}"
       ),
       coverageEnabled in test := true,
       coverageEnabled in IntegrationTest := true,
