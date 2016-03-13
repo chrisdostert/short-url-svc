@@ -4,5 +4,5 @@ stages:
   type: pipeline
 - name: package
   type: pipeline
-- name: push-docker-image
-  type: dev-op
+- name: deploy
+  type: pipeline

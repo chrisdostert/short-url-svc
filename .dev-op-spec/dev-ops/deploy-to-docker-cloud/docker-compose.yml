@@ -1,0 +1,10 @@
+deploy-to-docker-cloud:
+  image: dockercloud/cli
+  extends:
+    file: ../.common/docker-compose.yml
+    service: src
+  entrypoint: .dev-op-spec/dev-ops/deploy/entrypoint.sh
+  environment:
+    - DOCKERCLOUD_USER
+    - DOCKERCLOUD_PASS
+    - DOCKERCLOUD_STACK_NAME=nintex-dev

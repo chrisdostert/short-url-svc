@@ -2,4 +2,4 @@ generate-dockerfile:
   extends:
     file: ../.common/docker-compose.yml
     service: sbt
-  entrypoint: sbt clean docker:stage
+  entrypoint: sbt clean generateVersionFile docker:stage

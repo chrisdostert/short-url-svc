@@ -1,4 +1,4 @@
-description: packages service into a docker image and makes available in local docker registry
+description: packages service
 stages:
 - name: generate-dockerfile
   type: dev-op

@@ -2,7 +2,7 @@ integration-test:
   extends:
     file: ../.common/docker-compose.yml
     service: sbt
-  entrypoint: sbt coverage generateVersionFile it:test
+  entrypoint: sbt coverage it:test
   env_file:
     - ../.common/local-db.env
   links:
