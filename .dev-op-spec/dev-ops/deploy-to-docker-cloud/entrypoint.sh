@@ -3,7 +3,7 @@ SERVICE_VERSION=$(cat target/VERSION)
 
 updateDockerCloudService () {
 
-docker-cloud service set --sync --image ${DOCKER_REPOSITORY_NAME}:${SERVICE_VERSION} short-url-svc.${DOCKERCLOUD_STACK_NAME}
+docker-cloud service set --sync --image ${DOCKER_REPO_NAME}:${SERVICE_VERSION} short-url-svc.${DOCKERCLOUD_STACK_NAME}
 
 }
 
