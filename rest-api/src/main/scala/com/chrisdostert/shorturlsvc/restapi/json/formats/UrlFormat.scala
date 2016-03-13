@@ -9,16 +9,7 @@ object UrlFormat
   extends JsonSupport
     with RootJsonFormat[URL] {
 
-  override def read(json: JsValue): URL = {
-
-    json match {
-      case JsString(string) => new URL(string)
-      case _ => throw new IllegalArgumentException(
-        s"received invalid URL: ${json.compactPrint}"
-      )
-    }
-
-  }
+  override def read(json: JsValue): URL = new URL(json.convertTo[String])
 
   override def write(obj: URL): JsValue =
     JsString(obj.toString)

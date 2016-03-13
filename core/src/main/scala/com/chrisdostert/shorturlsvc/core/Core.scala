@@ -18,7 +18,7 @@ class Core private[core](
 
   def getShortUrlWithId(id: ShortUrlId): Future[ShortUrlView] =
     compositionRoot
-      .getShortUrlWithId
+      .getShortUrlWithIdUc
       .execute(id)
 
 }

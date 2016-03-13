@@ -1,8 +1,13 @@
 [![Build Status](https://travis-ci.org/chrisdostert/short-url-svc.svg?branch=master)](https://travis-ci.org/chrisdostert/short-url-svc)
 
 # Supported Use Cases
-- Create Short Url
-- Get Short Url With Id
+- Create Short URL
+- Get Short URL With Id
+
+
+# Official SDK's
+
+- [scala-sdk](https://github.com/chrisdostert/short-url-svc-scala-sdk)
 
 # Contributing
 

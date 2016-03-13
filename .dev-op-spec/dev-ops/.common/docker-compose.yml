@@ -13,7 +13,7 @@ sbt:
 mysql:
   extends:
     service: src
-  image: mysql:5.6.23
+  image: mysql:5.7.10
   ports:
     - 3306
   environment:

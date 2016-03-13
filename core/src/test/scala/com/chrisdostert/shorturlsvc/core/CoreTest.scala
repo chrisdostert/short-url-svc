@@ -41,7 +41,7 @@ class CoreTest extends BaseFunSpecTest {
       val expectedReturnedFutureShortUrlView = Future.successful(ATest.shortUrlView.nonNull)
 
       val mockCompositionRoot = mock[CompositionRoot](RETURNS_DEEP_STUBS)
-      when(mockCompositionRoot.getShortUrlWithId.execute(providedShortUrlId))
+      when(mockCompositionRoot.getShortUrlWithIdUc.execute(providedShortUrlId))
         .thenReturn(expectedReturnedFutureShortUrlView)
 
       val objectUnderTest = new Core(mockCompositionRoot)

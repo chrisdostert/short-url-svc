@@ -10,6 +10,6 @@ class CompositionRoot(
 
   val createShortUrlUc = wire[CreateShortUrlUc]
 
-  val getShortUrlWithId = wire[GetShortUrlWithIdUc]
+  val getShortUrlWithIdUc = wire[GetShortUrlWithIdUc]
 
 }
