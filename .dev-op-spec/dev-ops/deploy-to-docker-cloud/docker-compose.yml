@@ -1,5 +1,5 @@
 deploy-to-docker-cloud:
-  image: dockercloud/cli
+  image: dockercloud/cli:v1.0.2
   extends:
     file: ../.common/docker-compose.yml
     service: src
