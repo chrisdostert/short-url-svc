@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/chrisdostert/short-url-svc.svg?branch=master)](https://travis-ci.org/chrisdostert/short-url-svc)
+[![Build Status](https://travis-ci.org/urlable/short-url-svc.svg?branch=master)](https://travis-ci.org/urlable/short-url-svc)
 
 # Supported Use Cases
 - Create Short URL
@@ -7,7 +7,7 @@
 
 # Official SDK's
 
-- [scala-sdk](https://github.com/chrisdostert/short-url-svc-scala-sdk)
+- [scala-sdk](https://github.com/urlable/short-url-svc-scala-sdk)
 
 # Contributing
 

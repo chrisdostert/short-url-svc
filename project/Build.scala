@@ -24,7 +24,7 @@ object Build
         .value
         .withCachedResolution(true),
       parallelExecution in IntegrationTest := false,
-      organization := "com.chrisdostert",
+      organization := "com.urlable",
       scalaVersion := "2.11.7",
       scalacOptions := Seq(
         "-unchecked",
@@ -34,11 +34,11 @@ object Build
       ),
       libraryDependencies ++=
         Seq(
-          "org.testobjects" %% "test-objects-for-scala" % testObjectsForScalaVersion,
-          "org.scalatest" %% "scalatest" % scalaTestVersion % "test,it",
-          "org.mockito" % "mockito-core" % mockitoVersion % "test,it",
+          "org.testobjects" %% "test-objects-for-scala" % "0.1.4" % "test,it",
+          "org.scalatest" %% "scalatest" % "2.2.5" % "test,it",
+          "org.mockito" % "mockito-core" % "1.10.19" % "test,it",
           "com.iheart" %% "ficus" % ficusVersion % "test,it",
-          "com.softwaremill.macwire" %% "macros" % macWireVersion % "provided"
+          "com.softwaremill.macwire" %% "macros" % "2.2.2" % "provided"
         )
     ) ++
       Defaults

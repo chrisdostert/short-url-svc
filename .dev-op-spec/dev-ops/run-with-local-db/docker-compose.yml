@@ -1,5 +1,5 @@
 run-with-local-db:
-  image: chrisdostert/short-url-svc
+  image: urlable/short-url-svc
   ports:
     - 8080:8080
   env_file:

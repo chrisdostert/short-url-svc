@@ -4,14 +4,4 @@ trait LibraryDependencyVersions {
 
   val logbackClassicVersion: String = "1.1.5"
 
-  val macWireVersion: String = "2.2.2"
-
-  val mockitoVersion: String = "1.10.19"
-
-  val scalaTestVersion: String = "2.2.5"
-
-  val swaggerForAkkaHttpVersion: String = "0.6.2"
-
-  val testObjectsForScalaVersion: String = "0.1.4"
-
 }
